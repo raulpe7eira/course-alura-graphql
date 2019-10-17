@@ -19,7 +19,7 @@ class Cliente {
   }
 
   buscaPorId(id) {
-    const sql = `SELECT * FROM Clientes WHERE id=${id}; SELECT * FROM Pets WHERE id=${id}`
+    const sql = `SELECT * FROM Clientes WHERE id=${id}; SELECT * FROM Pets WHERE donoId=${id}`
 
     return executaQuery(sql).then(dados => {
       const cliente = dados[0][0]
