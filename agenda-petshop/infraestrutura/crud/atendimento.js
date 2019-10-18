@@ -94,19 +94,19 @@ class Atendimento {
       SELECT * FROM Clientes WHERE Clientes.id = ${clienteId}; SELECT * FROM Pets WHERE Pets.id = ${petId}; SELECT * FROM Servicos WHERE Servicos.id = ${servicoId};`
 
     return executaQuery(sql).then(resposta => {
-      const cliente = resposta[1][0],
-      const pet = resposta[2][0],
+      const cliente = resposta[1][0]
+      const pet = resposta[2][0]
       const servico = resposta[3][0]
-    
-        return ({
-            id, 
-            data,
-            status,
-            observacoes,
-            cliente,
-            pet,
-            servico
-        })
+
+      return ({
+        id, 
+        data,
+        status,
+        observacoes,
+        cliente,
+        pet,
+        servico
+      })
     })
   }
 

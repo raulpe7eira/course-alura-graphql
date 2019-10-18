@@ -1,48 +1,28 @@
-# Agenda-Petshop
+# course-alura-graphql
 
-Esse é o repositório inicial para o curso Iniciando com GraphQL disponível na [Alura](https://cursos.alura.com.br).
+Result of [Alura](https://alura.com.br) courses:
+- **[GraphQL Primeiros Passos](https://cursos.alura.com.br/course/graphql)**
+- **[GraphQL parte 2: Substituindo uma API REST](https://cursos.alura.com.br/course/graphql-parte-dois)**
 
-## Baixando o projeto
+## Stack
 
-### Tenho usuário no github e git instalado!
+- [Node.js](https://nodejs.org) / [Express](https://expressjs.com) / [GraphQL Yoga](https://github.com/prisma-labs/graphql-yoga) / [GraphQL Merge](https://github.com/Urigo/merge-graphql-schemas)
+- [MySQL](https://mysql.com)
+- [Docker](https://docker.com)
 
-Se você já tiver github, você pode forkar esse projeto para que ele fique salvo no seu perfil :)
+## How to use?
 
-Clique em fork
+### Project [agenda-petshop](https://github.com/juunegreiros/agenda-petshop):
 
-Depois, dentro do repositório no seu perfil, clique em clone e copie o link
+  - Up
+    ```bash
+    $ docker-compose -p agenda-petshop up -d
+    ```
 
-Depois navegue pela linha de comando até a pasta onde salva os seus projetos e clone o seu projeto:
+  - Down
+    ```bash
+    $ docker-compose -p agenda-petshop down
+    ```
 
-```
-  git clone link-que-voce-copiou
-```
-
-Depois que o repositório estiver baixado, entre na pasta que foi clonada:
-
-```
-  cd agenda-petshop
-```
-
-### Não tenho e/ou não quero usar o github
-
-Você pode clicar em `clone or download` e depois em `Download zip`
-
-Depois é só extrair o zip e navegar pela linha de comando até a pasta que você baixou
-
-## Instalação
-
-Dentro da pasta, faça a instalação do projeto:
-
-```
-  npm install
-```
-
-E, por fim, rode o projeto:
-
-```
-  npm start
-```
-
-
-Pronto! Quaisquer dúvidas, críticas ou comentários estou à disposição!
+  - Run
+      > https://localhost:4000
