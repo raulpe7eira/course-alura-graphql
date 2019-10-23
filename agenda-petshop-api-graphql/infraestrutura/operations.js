@@ -15,7 +15,6 @@ class Operations {
 
   adiciona(item) {
     return cruds[this._entidade].adiciona(item)
-
   }
 
   atualiza(novoItem, id) {

@@ -18,4 +18,4 @@ const server = new GraphQLServer({
   typeDefs
 })
 
-server.start(() => console.log('Server up...'))
+server.start(() => console.log('Servidor rodando na porta 4000'))

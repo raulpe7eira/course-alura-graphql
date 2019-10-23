@@ -1,9 +1,9 @@
-# Agenda Petshop API
+# Agenda Petshop Rest API
 # VERSION 0.0.1
 
 FROM node:12.12.0
 
-COPY agenda-petshop/ /usr/api
+COPY agenda-petshop-api-rest/ /usr/api
 WORKDIR /usr/api
 
 RUN npm install

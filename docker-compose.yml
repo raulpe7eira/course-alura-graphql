@@ -6,42 +6,46 @@ networks:
 
 services:
   agenda-petshop-db:
-    container_name: agenda-petshop-mysql
     image: mysql:5.7.28
-    env_file: env/local-db-mysql.env
+    env_file: env/.env.local-db-mysql
     ports:
-      - 3307:3306
+      - 3306:3306
     networks:
       - agenda-petshop-network
 
-  # agenda-petshop-api:
-  #   container_name: agenda-petshop-graphql
-  #   image: node:12.12.0
-  #   volumes:
-  #     - ./agenda-petshop/:/usr/api
-  #   working_dir: /usr/api
-  #   command: sh -c 'npm install && ./wait-for-it.sh agenda-petshop-db:3306 -- npm start'
-  #   env_file: env/local-api-graphql.env
-  #   ports:
-  #     - 4000:4000
-  #   networks:
-  #     - agenda-petshop-network
-  #   links:
-  #     - agenda-petshop-db
-  #   depends_on:
-  #     - agenda-petshop-db
-
-  agenda-petshop-api:
-    container_name: agenda-petshop-graphql
+  agenda-petshop-api-graphql:
     build:
       context: ./
-      dockerfile: Dockerfile
-    env_file: env/local-api-graphql.env
+      dockerfile: agenda-petshop-api-graphql/Dockerfile
+    env_file: env/.env.local-api-graphql
     ports:
       - 4000:4000
     networks:
       - agenda-petshop-network
-    links:
-      - agenda-petshop-db
     depends_on:
       - agenda-petshop-db
+
+  agenda-petshop-api-rest:
+    build:
+      context: ./
+      dockerfile: agenda-petshop-api-rest/Dockerfile
+    env_file: env/.env.local-api-rest
+    ports:
+      - 4001:4001
+    networks:
+      - agenda-petshop-network
+    depends_on:
+      - agenda-petshop-db
+
+  agenda-petshop-front-react:
+    build:
+      context: ./
+      dockerfile: agenda-petshop-front-react/Dockerfile
+    env_file: env/.env.local-front-react
+    ports:
+      - 3000:3000
+    networks:
+      - agenda-petshop-network
+    depends_on:
+      - agenda-petshop-api-graphql
+      - agenda-petshop-api-rest
