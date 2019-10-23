@@ -7,26 +7,26 @@ Result of [Alura](https://alura.com.br) courses:
 
 ## Stack
 
-- Frontend: [Node.js](https://nodejs.org) / [React](https://reactjs.org) / [Apollo GraphQL](https://www.apollographql.com/)
-- Backend: [Node.js](https://nodejs.org) / [Express](https://expressjs.com) / [GraphQL Yoga](https://github.com/prisma-labs/graphql-yoga)
-- DBMS: [MySQL](https://mysql.com)
-- Runner: [Docker](https://docker.com)
+- **Frontend:** [Node.js](https://nodejs.org), [React](https://reactjs.org), [Apollo GraphQL](https://www.apollographql.com/)
+- **Backend:** [Node.js](https://nodejs.org), [Express](https://expressjs.com), [GraphQL Yoga](https://github.com/prisma-labs/graphql-yoga)
+- **DBMS:** [MySQL](https://mysql.com)
+- **Runner:** [Docker](https://docker.com)
 
 ## How to use?
 
 ### Project [agenda-petshop](https://github.com/juunegreiros/agenda-petshop):
 
-  - Up
+  - **Up**
     ```bash
     $ docker-compose -p agenda-petshop up -d
     ```
 
-  - Down
+  - **Down**
     ```bash
     $ docker-compose -p agenda-petshop down
     ```
 
-  - Let's go
+  - **Let's go**
 
     | Services    | URL                    |
     |------------:|:-----------------------|
