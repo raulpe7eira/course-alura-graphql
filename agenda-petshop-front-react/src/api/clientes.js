@@ -1,4 +1,3 @@
-import { restApi } from './config'
 import { graphqlApi } from './config'
 
 const listarClientes = () => 
