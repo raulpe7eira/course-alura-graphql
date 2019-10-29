@@ -1,4 +1,5 @@
 import axios from 'axios'
+import ApolloClient from 'apollo-boost'
 
 export const restApi = axios.create({
   baseURL: `${process.env.REACT_APP_API_REST_HOST}:${process.env.REACT_APP_API_REST_PORT}`,
@@ -25,4 +26,8 @@ export const graphqlApi = ({
   mutation: (mutation) => {
     return fetchGraphqlApi(`mutation { ${mutation} }`)
   }
+})
+
+export const apolloClient = new ApolloClient({
+  uri: `${process.env.REACT_APP_FRONT_REACT_HOST}:${process.env.REACT_APP_FRONT_REACT_PORT}`
 })
