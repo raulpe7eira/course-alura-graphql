@@ -3,7 +3,7 @@
 Result of [Alura](https://alura.com.br) courses:
 - **[GraphQL parte 1: Primeiros passos](https://cursos.alura.com.br/course/graphql)**
 - **[GraphQL parte 2: Substituindo uma API REST](https://cursos.alura.com.br/course/graphql-parte-dois)**
-- **[GraphQL parte 3: Integrando com sua aplicação](https://www.alura.com.br/curso-online-graphql-integrando-com-front-end)** [WIP]
+- **[GraphQL parte 3: Integrando com sua aplicação](https://www.alura.com.br/curso-online-graphql-integrando-com-front-end)**
 
 ## Stack
 
