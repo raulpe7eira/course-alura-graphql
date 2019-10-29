@@ -29,5 +29,5 @@ export const graphqlApi = ({
 })
 
 export const apolloClient = new ApolloClient({
-  uri: `${process.env.REACT_APP_FRONT_REACT_HOST}:${process.env.REACT_APP_FRONT_REACT_PORT}`
+  uri: `${process.env.REACT_APP_API_GRAPHQL_HOST}:${process.env.REACT_APP_API_GRAPHQL_PORT}`
 })
